@@ -150,7 +150,7 @@ server <- function(input, output) {
        evnt <- ld+evnt
        time <- time + ii
        subtitle <- paste(subtitle, "nach einer Loading Dose von", input$LAMT, "mg")
-       if(input$BOLUS){
+       if(input$BOLUS && !input$ORAL){
          subtitle <- paste(subtitle, "i.v. als Bolus")
        } else if (input$ORAL){
          subtitle <- paste(subtitle, "oral")
